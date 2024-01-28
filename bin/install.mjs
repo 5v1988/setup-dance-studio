@@ -37,7 +37,7 @@ try {
   await exec(`git clone --depth 1 ${gitRepo} ${projectPath} --quiet`);
   gitSpinner.succeed();
 
-  const cleanSpinner = ora("Removing useless files").start();
+  const cleanSpinner = ora("Removing unwanted files").start();
   // remove my git history
   const rmGit = rm(path.join(projectPath, ".git"), { recursive: true, force: true });
   // remove the installation file
@@ -51,6 +51,9 @@ try {
 
   const npmSpinner = ora("Installing dependencies...").start();
   await exec("npm install");
+  npmSpinner.succeed();
+
+  await exec("npm update");
   npmSpinner.succeed();
 
   await exec("npx playwright install");
