@@ -1,0 +1,17 @@
+{
+  "name": "setup-dance-studio",
+  "version": "1.0.0",
+  "description": "Setup project structure for dancing-yaml",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "setup-dance-studio": "bin/install.mjs"
+  },
+  "author": "Veera",
+  "license": "ISC",
+  "dependencies": {
+    "ora": "^8.0.1"
+  }
+}
