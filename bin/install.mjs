@@ -59,10 +59,11 @@ try {
 
   const npmPlaywrigthSpinner = ora("Setting up Playwright dependencies...").start();
   await exec("npx playwright install");
-  npmSpinner.succeed();
+  npmPlaywrigthSpinner.succeed();
+
   console.log(chalk.green('The project setup is completed!'));
-  console.log(chalk.green('Next steps: 1. Run example tests using the below command:'));
-  console.log(chalk.yellow('                cd ', chalk.bold('%s'), '  && npm run test'),
+  console.log(chalk.blue('Next steps: 1. Run example tests using the below command:'));
+  console.log(chalk.yellow.bold('                cd ', chalk.bold('%s'), ' && npm run test'),
     projectName);
   console.log(chalk.blue('            2. Build your own tests, by following the steps from here:'));
   console.log(chalk.yellow.bold('                https://github.com/5v1988/demo-dancing-yaml'));
