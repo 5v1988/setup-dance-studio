@@ -1,6 +1,6 @@
 {
   "name": "setup-dance-studio",
-  "version": "1.0.0-RC2",
+  "version": "1.0.0-RC3",
   "description": "Setup project structure for dancing-yaml",
   "main": "index.js",
   "scripts": {

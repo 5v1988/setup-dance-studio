@@ -27,8 +27,7 @@ const gitRepo = "https://github.com/5v1988/demo-dancing-yaml.git";
 if (fs.existsSync(projectPath)) {
   console.log(`The file ${projectName} already exist in the current directory, please give it another name.`);
   process.exit(1);
-}
-else {
+} else {
   fs.mkdirSync(projectPath);
 }
 
@@ -66,7 +65,7 @@ try {
   console.log(chalk.yellow('                cd ', chalk.bold('%s'), '  && npm run test'),
     projectName);
   console.log(chalk.blue('            2. Build your own tests, by following the steps from here:'));
-  console.log(chalk.yellow.bold('                https://github.com/5v1988/demo-dancing-yaml')
+  console.log(chalk.yellow.bold('                https://github.com/5v1988/demo-dancing-yaml'));
 } catch (error) {
   // clean up in case of error, so the user does not have to do it manually
   fs.rmSync(projectPath, { recursive: true, force: true });
