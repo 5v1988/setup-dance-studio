@@ -1,7 +1,7 @@
 {
-  "name": "setup-dance-studio",
-  "version": "1.0.0-RC4",
-  "description": "Setup project structure for dancing-yaml",
+  "name": "setup-kanstructor",
+  "version": "1.0.0",
+  "description": "Setup project structure for Kanstructor",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

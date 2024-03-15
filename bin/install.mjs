@@ -14,14 +14,14 @@ const rm = promisify(fs.rm);
 if (process.argv.length < 3) {
   console.log("You have to provide a name to your project.");
   console.log("For example :");
-  console.log("    npx setup-dance-studio dancing-project");
+  console.log("    npx setup-kanstructor demo-project");
   process.exit(1);
 }
 
 const projectName = process.argv[2];
 const currentPath = process.cwd();
 const projectPath = path.join(currentPath, projectName);
-const gitRepo = "https://github.com/5v1988/demo-dancing-yaml.git";
+const gitRepo = "https://github.com/5v1988/kanstructor-demo-project.git";
 
 // create project directory
 if (fs.existsSync(projectPath)) {
@@ -66,7 +66,7 @@ try {
   console.log(chalk.yellow.bold('                cd ', chalk.bold('%s'), ' && npm run test'),
     projectName);
   console.log(chalk.blue('            2. Build your own tests, by following the steps from here:'));
-  console.log(chalk.yellow.bold('                https://github.com/5v1988/demo-dancing-yaml'));
+  console.log(chalk.yellow.bold('                https://github.com/5v1988/kanstructor'));
 } catch (error) {
   // clean up in case of error, so the user does not have to do it manually
   fs.rmSync(projectPath, { recursive: true, force: true });
